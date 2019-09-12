@@ -1,0 +1,45 @@
+{
+  "name": "react-read-more-read-less",
+  "version": "1.0.0",
+  "description": "Highly customizable React component that displays truncated text with \"read more\" and \"read\" less links",
+  "main": "build/index.js",
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/giatro/react-read-more-read-less.git"
+  },
+  "keywords": [
+    "react",
+    "long text",
+    "read more",
+    "read less"
+  ],
+  "author": {
+    "name": "Your name",
+    "email": "gianluca.troiani@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giatro/react-read-more-read-less/issues"
+  },
+  "homepage": "https://github.com/giatro/react-read-more-read-less#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1"
+  }
+}
