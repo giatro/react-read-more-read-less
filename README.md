@@ -22,8 +22,8 @@ class myComponent extends Component {
                 readMoreText={"Read more ▼"}
                 readLessText={"Read less ▲"}
             >
-                {myLongText
-            }</ReactReadMoreReadLess>
+                {myLongText}
+            </ReactReadMoreReadLess>
         );
     }
 }
