@@ -33,6 +33,7 @@ class myComponent extends Component {
 | Prop | Type | Default |
 | ---- | ---- | ------- |
 | charLimit | integer | 150 |
+| ellipsis | String | … |
 | readMoreText | String | Read more |
 | readLessText | String | Read less |
 | readMoreClassName | String | react-read-more-read-less react-read-more-read-less-more |

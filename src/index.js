@@ -9,9 +9,9 @@ class ReactReadMoreReadLess extends React.Component {
     }
     render() {
         const { props } = this;
-        const { children, readMoreText, readLessText, readMoreClassName, readLessClassName, readMoreStyle, readLessStyle, charLimit } = props;
+        const { children, ellipsis, readMoreText, readLessText, readMoreClassName, readLessClassName, readMoreStyle, readLessStyle, charLimit } = props;
         const { showMore } = this.state;
-        const shortText = children.substr(0, charLimit) + '...';
+        const shortText = children.substr(0, charLimit) + ellipsis;
         const that = this;
         const ReadMore = () => (charLimit >= children.length ? null : <React.Fragment><a
             href="#"
@@ -41,6 +41,7 @@ class ReactReadMoreReadLess extends React.Component {
 
 ReactReadMoreReadLess.propTypes = {
     charLimit: PropTypes.number,
+    ellipsis: PropTypes.string,
     readMoreText: PropTypes.string,
     readLessText: PropTypes.string,
     readMoreClassName: PropTypes.string,
@@ -51,6 +52,7 @@ ReactReadMoreReadLess.propTypes = {
 };
 ReactReadMoreReadLess.defaultProps = {
     charLimit: 150,
+    ellipsis: '…',
     readMoreText: 'Read more',
     readLessText: 'Read less',
     readMoreClassName: 'react-read-more-read-less react-read-more-read-less-more',

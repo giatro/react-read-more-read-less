@@ -371,6 +371,7 @@ var ReactReadMoreReadLess = function (_React$Component) {
         value: function render() {
             var props = this.props;
             var children = props.children,
+                ellipsis = props.ellipsis,
                 readMoreText = props.readMoreText,
                 readLessText = props.readLessText,
                 readMoreClassName = props.readMoreClassName,
@@ -380,7 +381,7 @@ var ReactReadMoreReadLess = function (_React$Component) {
                 charLimit = props.charLimit;
             var showMore = this.state.showMore;
 
-            var shortText = children.substr(0, charLimit) + '...';
+            var shortText = children.substr(0, charLimit) + ellipsis;
             var that = this;
             var ReadMore = function ReadMore() {
                 return charLimit >= children.length ? null : _react2.default.createElement(
@@ -433,6 +434,7 @@ var ReactReadMoreReadLess = function (_React$Component) {
 
 ReactReadMoreReadLess.propTypes = {
     charLimit: _propTypes2.default.number,
+    ellipsis: _propTypes2.default.string,
     readMoreText: _propTypes2.default.string,
     readLessText: _propTypes2.default.string,
     readMoreClassName: _propTypes2.default.string,
@@ -443,6 +445,7 @@ ReactReadMoreReadLess.propTypes = {
 };
 ReactReadMoreReadLess.defaultProps = {
     charLimit: 150,
+    ellipsis: '…',
     readMoreText: 'Read more',
     readLessText: 'Read less',
     readMoreClassName: 'react-read-more-read-less react-read-more-read-less-more',
