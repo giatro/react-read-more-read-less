@@ -381,7 +381,7 @@ var ReactReadMoreReadLess = function (_React$Component) {
                 charLimit = props.charLimit;
             var showMore = this.state.showMore;
 
-            var shortText = children.substr(0, charLimit) + ellipsis;
+            var shortText = children.substr(0, charLimit).replace(/[\s\n]+$/) + (charLimit >= children.length ? null : ellipsis);
             var that = this;
             var ReadMore = function ReadMore() {
                 return charLimit >= children.length ? null : _react2.default.createElement(

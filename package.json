@@ -1,6 +1,6 @@
 {
   "name": "react-read-more-read-less",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Highly customizable React component that displays truncated text with \"read more\" and \"read\" less links",
   "main": "build/index.js",
   "peerDependencies": {
