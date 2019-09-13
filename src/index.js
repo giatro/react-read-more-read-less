@@ -11,7 +11,7 @@ class ReactReadMoreReadLess extends React.Component {
         const { props } = this;
         const { children, ellipsis, readMoreText, readLessText, readMoreClassName, readLessClassName, readMoreStyle, readLessStyle, charLimit } = props;
         const { showMore } = this.state;
-        const shortText = children.substr(0, charLimit).replace(/[\s\n]+$/) + (charLimit >= children.length ? null : ellipsis);
+        const shortText = children.substr(0, charLimit).replace(/[\s\n]+$/) + (charLimit >= children.length ? '' : ellipsis);
         const that = this;
         const ReadMore = () => (charLimit >= children.length ? null : <React.Fragment><a
             href="#"
