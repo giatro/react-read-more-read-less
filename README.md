@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/react-read-more-read-less.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-read-more-read-less/)
 [![npm version](https://badge.fury.io/js/react-read-more-read-less.svg)](https://badge.fury.io/js/react-read-more-read-less)
-![license-isc](https://img.shields.io/github/license/Thamodaran/react-read-more-read-less.svg)
+![license-isc](https://img.shields.io/github/license/giatro/react-read-more-read-less.svg)
 
 ## Install
 ```
@@ -35,7 +35,7 @@ class myComponent extends Component {
 | charLimit | integer | 150 |
 | readMoreText | String | Read more |
 | readLessText | String | Read less |
-| readMoreClassName | String | react-read-more-read-less-more |
-| readLessClassName | String | react-read-more-read-less-less |
-| readMoreStyle | object | {whiteSpace: "nowrap"} |
-| readLessStyle | object | {whiteSpace: "nowrap"} |
+| readMoreClassName | String | react-read-more-read-less react-read-more-read-less-more |
+| readLessClassName | String | react-read-more-read-less react-read-more-read-less-less |
+| readMoreStyle | object | {whiteSpace: "nowrap", textDecoration: "none"} |
+| readLessStyle | object | {whiteSpace: "nowrap", textDecoration: "none"} |

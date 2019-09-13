@@ -11,9 +11,9 @@ class ReactReadMoreReadLess extends React.Component {
         const { props } = this;
         const { children, readMoreText, readLessText, readMoreClassName, readLessClassName, readMoreStyle, readLessStyle, charLimit } = props;
         const { showMore } = this.state;
-        const shortText = children.substr(0, charLimit);
+        const shortText = children.substr(0, charLimit) + '...';
         const that = this;
-        const ReadMore = () => (charLimit >= children.length ? null : <React.Fragment>...<a
+        const ReadMore = () => (charLimit >= children.length ? null : <React.Fragment><a
             href="#"
             className={readMoreClassName}
             role="presentation"
@@ -53,9 +53,9 @@ ReactReadMoreReadLess.defaultProps = {
     charLimit: 150,
     readMoreText: 'Read more',
     readLessText: 'Read less',
-    readMoreClassName: 'react-read-more-read-less-more',
-    readLessClassName: 'react-read-more-read-less-less',
-    readMoreStyle: {whiteSpace: "nowrap"},
-    readLessStyle: {whiteSpace: "nowrap"},
+    readMoreClassName: 'react-read-more-read-less react-read-more-read-less-more',
+    readLessClassName: 'react-read-more-read-less react-read-more-read-less-less',
+    readMoreStyle: {whiteSpace: "nowrap", textDecoration: "none"},
+    readLessStyle: {whiteSpace: "nowrap", textDecoration: "none"}
 };
 export default ReactReadMoreReadLess;

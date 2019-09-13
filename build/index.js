@@ -380,13 +380,12 @@ var ReactReadMoreReadLess = function (_React$Component) {
                 charLimit = props.charLimit;
             var showMore = this.state.showMore;
 
-            var shortText = children.substr(0, charLimit);
+            var shortText = children.substr(0, charLimit) + '...';
             var that = this;
             var ReadMore = function ReadMore() {
                 return charLimit >= children.length ? null : _react2.default.createElement(
                     _react2.default.Fragment,
                     null,
-                    '...',
                     _react2.default.createElement(
                         'a',
                         {
@@ -446,10 +445,10 @@ ReactReadMoreReadLess.defaultProps = {
     charLimit: 150,
     readMoreText: 'Read more',
     readLessText: 'Read less',
-    readMoreClassName: 'react-read-more-read-less-more',
-    readLessClassName: 'react-read-more-read-less-less',
-    readMoreStyle: { whiteSpace: "nowrap" },
-    readLessStyle: { whiteSpace: "nowrap" }
+    readMoreClassName: 'react-read-more-read-less react-read-more-read-less-more',
+    readLessClassName: 'react-read-more-read-less react-read-more-read-less-less',
+    readMoreStyle: { whiteSpace: "nowrap", textDecoration: "none" },
+    readLessStyle: { whiteSpace: "nowrap", textDecoration: "none" }
 };
 exports.default = ReactReadMoreReadLess;
 
