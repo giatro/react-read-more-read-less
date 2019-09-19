@@ -29,6 +29,8 @@ class myComponent extends Component {
 }
 ```
 
+[Test on CodeSandbox](https://codesandbox.io/s/youthful-dawn-06mcf?fontsize=14)
+
 ## PROPTYPES
 | Prop | Type | Default |
 | ---- | ---- | ------- |
