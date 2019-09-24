@@ -384,35 +384,27 @@ var ReactReadMoreReadLess = function (_React$Component) {
             var shortText = children.substr(0, charLimit).replace(/[\s\n]+$/, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]+$/, "") + (charLimit >= children.length ? '' : ellipsis);
             var that = this;
             var ReadMore = function ReadMore() {
-                return charLimit >= children.length ? null : _react2.default.createElement(
-                    _react2.default.Fragment,
-                    null,
-                    _react2.default.createElement(
-                        'a',
-                        {
-                            href: '#',
-                            className: readMoreClassName,
-                            role: 'presentation',
-                            style: readMoreStyle,
-                            onClick: function onClick(ev) {
-                                ev.preventDefault();
-                                that.setState({ showMore: true });
-                            }
-                        },
-                        readMoreText
-                    )
+                return charLimit >= children.length || !readMoreText ? null : _react2.default.createElement(
+                    'span',
+                    {
+                        className: readMoreClassName,
+                        role: 'presentation',
+                        style: readMoreStyle,
+                        onClick: function onClick() {
+                            that.setState({ showMore: true });
+                        }
+                    },
+                    readMoreText
                 );
             };
             var ReadLess = function ReadLess() {
-                return charLimit >= children.length ? null : _react2.default.createElement(
-                    'a',
+                return charLimit >= children.length || !readLessText ? null : _react2.default.createElement(
+                    'span',
                     {
-                        href: '#',
                         className: readLessClassName,
                         role: 'presentation',
                         style: readLessStyle,
-                        onClick: function onClick(ev) {
-                            ev.preventDefault();
+                        onClick: function onClick() {
                             that.setState({ showMore: false });
                         }
                     },
@@ -450,8 +442,8 @@ ReactReadMoreReadLess.defaultProps = {
     readLessText: 'Read less',
     readMoreClassName: 'react-read-more-read-less react-read-more-read-less-more',
     readLessClassName: 'react-read-more-read-less react-read-more-read-less-less',
-    readMoreStyle: { whiteSpace: "nowrap", textDecoration: "none" },
-    readLessStyle: { whiteSpace: "nowrap", textDecoration: "none" }
+    readMoreStyle: { whiteSpace: "nowrap", cursor: "pointer" },
+    readLessStyle: { whiteSpace: "nowrap", cursor: "pointer" }
 };
 exports.default = ReactReadMoreReadLess;
 
